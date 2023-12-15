@@ -1,0 +1,103 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Stylish Webpage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>贡献开源知识全景图</h1>
+
+    <p>这里是COSDT的知识地图，包括 <a href="#euler"><strong>openEuler</strong></a>、 <a href="#llm"><strong>大模型</strong></a>、<a href="#torch"><strong>PyTorch</strong></a>、<a href="#cv"><strong>OpenCV</strong></a>等相关技术博客和<a href="#others"><strong>开源技能</strong></a>，欢迎学习、交流和你的贡献！</p>
+
+    <div class="category" id="euler">
+        <h2>openEuler相关</h2>
+        <p>openEuler介绍、容器镜像构建、OpenStack部署等</p>
+        <div class="color-block" id="block-blue">openEuler</div>
+        <div class="color-block" id="block-orange">OpenStack</div>
+
+        <div class="button-group">
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/2')">EulerPublisher: 一键发布openEuler镜像背后的技术</button>
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/17')" class="button: orange-button">如何部署OpenStack</button>
+        </div>
+    </div>
+
+    <div class="category" id='llm'>
+        <h2>大模型相关项目</h2>
+        <p>多种语言大模型在昇腾的部署教程</p>
+        <div class="color-block" id="block-purple">Env Setup</div>
+        <div class="color-block" id="block-orange">Baichuan</div>
+        <div class="color-block" id="block-pink">Vicuna</div>
+        <div class="color-block" id="block-blue">Llama</div>
+        <div class="button-group">
+            <button onclick="openLink('https://github.com/cosdt/llm/blob/main/20231019%E6%9C%80%E6%96%B0%E7%A4%BE%E5%8C%BA%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md')" class="button: purple-button">20231019最新社区版环境搭建</button>
+            <button onclick="openLink('https://github.com/cosdt/llm/blob/main/Ascend910B-Baichuan2-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md')" class="button: orange-button">Ascend-Baichuan2-环境搭建</button>
+            <button onclick="openLink('https://github.com/cosdt/llm/blob/main/Ascend910B-Vicuna-Deepspeed%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md')" class="button: pink-button">Ascend-Vicuna-Deepspeed环境搭建</button>
+            <button onclick="openLink('https://github.com/cosdt/llm/blob/main/Ascend910B-Vicuna-%E5%BE%AE%E8%B0%83%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md')" class="button: pink-button">Ascend-Vicuna-微调环境搭建</button>
+            <button onclick="openLink('https://github.com/cosdt/llm/blob/main/Ascend910B-Vicuna-%E6%8E%A8%E7%90%86%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md')" class="button: pink-button">Ascend-Vicuna-推理环境搭建</button>
+            <button onclick="openLink('https://github.com/cosdt/llm/blob/main/Ascend910B-llama%2Bbloom-%E6%8E%A8%E7%90%86%E5%BE%AE%E8%B0%83%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md')">Ascend-llama+bloom-推理微调环境搭建</button>
+            <button onclick="openLink('https://github.com/cosdt/llm/blob/main/Llama2GPU%E9%83%A8%E7%BD%B2%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B.md')">Llama2GPU部署简易教程</button>
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/8')">容器昇腾跑通llama2-7B</button>
+        </div>
+    </div>
+
+    <div class="category" id='torch'>
+        <h2>PyTorch</h2>
+        <p>PyTorch环境搭建、Dispatch/AMP等机制详解</p>
+        <div class="color-block" id="block-orange">Env Setup</div>
+        <div class="color-block" id="block-blue">Tech blog</div>
+        <div class="button-group">
+            <button onclick="openLink('https://fffrog.github.io/2023/11/13/PyTorch-AMP-Mechanism/')">PyTorch AMP Mechanism</button>
+            <button onclick="openLink('https://fffrog.github.io/2023/11/09/PyTorch-Tensor-Mechanism/')">PyTorch Tensor Mechanism</button>
+            <button onclick="openLink('https://fffrog.github.io/2023/11/09/PyTorch-Operator-Register/')">PyTorch Operator Register</button>
+            <button onclick="openLink('https://fffrog.github.io/2023/11/09/PyTorch-Dispatcher-Mechanism/')">PyTorch Dispatcher Mechansim</button>
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/7')" class="button: orange-button">容器环境安装PyTorch Ascend NPU</button>
+        </div>
+    </div>
+    <div class="category" id='cv'>
+        <h2>OpenCV</h2>
+        <p>OpenCV相关洞察、环境搭建、算子开发教程</p>
+        <div class="color-block" id="block-orange">洞察</div>
+        <div class="color-block" id="block-blue">Tech blog</div>
+        <div class="button-group">
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/9')" class="button: orange-button">OpenCV社区洞察</button>
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/10')">从零开始编译OpenCV NPU教程</button>
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/15')">如何使用dvpp接口开发OpenCV图像预处理算子</button>
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/19')">OpenCV算子开发及其NPU调用方式</button>
+        </div>
+        <h3>昇腾固件及驱动安装</h3>
+        <p>OpenCV相关洞察、环境搭建、算子开发教程</p>
+        <div class="color-block" id="block-orange">固件安装</div>
+        <div class="color-block" id="block-blue">ONNXRuntime</div>
+        <div class="button-group">
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/1')" class="button: orange-button">昇腾虚拟机固件与驱动安装</button>
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/3')">ONNXRuntime入门 - 如何编译ONNXRuntime?</button>
+        </div>
+    </div>
+    <div class="category" id='others'>
+        <h2>开源技能</h2>
+        <p>提交PR、昇腾文档等相关资料</p>
+        <div class="button-group">
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/6')">如何向开源项目提交 PR</button>
+            <button onclick="openLink('https://fffrog.github.io/2023/11/08/How-to-Debug-Linux-Kernel/')">How to Debug Linux Kernel</button>
+            <button onclick="openLink('https://github.com/cosdt/cosdt.github.io/issues/11')">如何构建一个RPM包</button>
+            <button onclick="openLink('https://www.hiascend.com/zh/')">昇腾官网（包含各种文档资料）</button>
+        </div>
+    </div>
+    <!-- Add more categories if needed -->
+
+</div>
+
+<script>
+    function openLink(url) {
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>

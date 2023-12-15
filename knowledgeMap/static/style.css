@@ -1,0 +1,94 @@
+/* static/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+}
+.color-block {
+    display: inline-block;
+    width: 90px;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+#block-blue {
+    background-color: #2980b9;
+}
+#block-orange {
+    background-color: hsl(30, 70%, 70%);
+}
+#block-pink {
+    background-color: hsl(0, 70%, 70%);
+}
+#block-purple {
+    background-color: hsl(270, 70%, 70%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #3498db;
+}
+
+.category {
+    margin-top: 30px;
+}
+
+h2 {
+    color: #000;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.orange-button {
+    background-color: hsl(30, 70%, 70%);
+}
+
+.purple-button {
+    background-color: hsl(270, 70%, 70%);
+}
+
+.pink-button {
+    background-color: hsl(0, 70%, 70%);
+}
