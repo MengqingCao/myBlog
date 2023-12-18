@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
         with:
-          branches: [ main ]
+          ref: main
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
